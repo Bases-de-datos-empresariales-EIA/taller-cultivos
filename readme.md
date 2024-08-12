@@ -1,6 +1,3 @@
-Claro, aquí tienes un `README.md` que explica las tablas y sus relaciones en el esquema `cultivo`.
-
-```markdown
 # Esquema `cultivo`
 
 Este documento describe las tablas y sus relaciones dentro del esquema `cultivo` en la base de datos. A continuación, se proporciona una descripción de cada tabla, así como las relaciones entre ellas.
