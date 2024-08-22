@@ -127,4 +127,54 @@ from cultivo."Lot" l
     on s."shipmentDate" = c."collectionDate"
 order by l.id, s.id;
 
+-- 11. Muestra el promedio de racimos recolectados por recogida (`Collection`) para cada lote (`Lot`). Incluye el identificador del lote y el promedio de racimos.
+select 
+  l.name as "lotId",
+  avg(bunches) as "averageBunches"
+from cultivo."Collection" c
+join cultivo."Lot" l
+  on c."lotId" = l.id
+group by l.name
+order by avg(bunches) desc;
+
+-- 12. Encuentra la recogida (`Collection`) más reciente para cada lote (`Lot`). Muestra el identificador del lote, el identificador de la recogida y la fecha de la recogida.
+
+
+  -- 13. Muestra el mes del año 2024 que más kilogramos recibidos en planta tiene.
+select 
+  extract(month from s."shipmentDate"),
+  sum(s."deliveredWeight") as "totalWeight"
+from cultivo."Shipment" s
+where extract(year from s."shipmentDate") = 2024
+group by extract(month from s."shipmentDate")
+order by sum(s."deliveredWeight") desc
+limit 1;
+
+-- 14. Muestra el lote que tiene más racimos recogidos en la historia.
+select 
+  l.id as "lotId",
+  l.name as "lotName",
+  sum(c.bunches) as "totalBunches"
+from cultivo."Lot" l
+  join cultivo."Collection" c
+    on c."lotId" = l.id
+group by l.id, l.name
+order by sum(c.bunches) desc
+limit 1;
+
+-- 15. Muestra el mes con más facturación en la historia. (`Invoice`)
+select 
+extract(year from i."date"),
+extract(month from i.date) as "invoiceMonth",
+sum(i."grossTotal") as "totalAmount"
+from cultivo."Invoice" i
+where i."grossTotal" is not null
+group by extract(year from i."date"), extract(month from i."date")
+order by sum(i."grossTotal") desc
+limit 1
+
+
+
+
+
 
