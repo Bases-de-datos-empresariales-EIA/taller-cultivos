@@ -27,4 +27,30 @@
    Muestra el número total de recogidas (`Collection`) realizadas para cada lote (`Lot`) en el último año. Incluye el identificador del lote y el número total de recogidas.
 
 10. **Ejercicio 10**  
-    Encuentra los lotes (`Lot`) y los envíos (`Shipment`) que se realizaron en el mismo rango de fechas. Muestra el identificador del lote, el identificador del envío, y las fechas correspondientes.
+   Encuentra los lotes (`Lot`) y los envíos (`Shipment`) que se realizaron en el mismo rango de fechas. Muestra el identificador del lote, el identificador del envío, y las fechas correspondientes.
+
+
+11. **Ejercicio 11**  
+   Muestra el promedio de racimos recolectados por recogida (`Collection`) para cada lote (`Lot`). Incluye el identificador del lote y el promedio de racimos.
+    
+
+12. **Ejercicio 12**  
+   Encuentra la recogida (`Collection`) más reciente para cada lote (`Lot`). Muestra el identificador del lote, el identificador de la recogida y la fecha de la recogida.
+
+13. **Ejercicio 13**  
+   Muestra el mes del año 2024 que más kilogramos recibidos en planta tiene.
+
+14. **Ejercicio 14**
+   Muestra el lote que tiene más racimos recogidos en la historia.
+
+15. **Ejercicio 15**
+   Muestra el mes con más facturación en la historia. (`Invoice`)
+
+
+
+
+
+
+
+
+
