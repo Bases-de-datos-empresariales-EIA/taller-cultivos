@@ -14,7 +14,7 @@
    Calcula el peso promedio de los racimos en los envíos (`Shipment`) para cada lote (`Lot`). Muestra el identificador del lote y el peso promedio.
 
 6. **Ejercicio 6**  
-   Encuentra la recogida (`Collection`) con la mayor cantidad de racimos para cada lote (`Lot`). Muestra el identificador de la recogida, el identificador del lote, y la cantidad de racimos.
+   Encuentra la recogida (`Collection`) más grande que se haya hecho en el lote (`Lot`) 1. Muestra el identificador de la recogida, el identificador del lote, y la cantidad de racimos.
 
 7. **Ejercicio 7**  
    Muestra la cantidad total de racimos recolectados (`Collection`) en cada lote (`Lot`) para el año en curso. Incluye el identificador del lote y la cantidad total de racimos.
