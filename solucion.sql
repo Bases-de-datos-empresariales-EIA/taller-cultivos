@@ -55,27 +55,9 @@ from cultivo."Shipment" s
     on c."lotId" = l.id
 group by l.name;
 
--- 6. Encuentra la recogida (Collection) con la mayor cantidad de racimos para cada lote (Lot). Muestra el identificador de la recogida, el identificador del lote, y la cantidad de racimos.
+-- 6. Encuentra la recogida (Collection) más grande que se haya hecho en el lote (Lot) 1. Muestra el identificador de la recogida, el identificador del lote, y la cantidad de racimos.
 
-with subquery_maximo as (
-  select 
-  l.id,
-  l.name,
-  max(c.bunches)
-  from cultivo."Lot" l
-    join cultivo."Collection" c
-      on c."lotId" = l.id
-  group by l.name, l.id
-)
-select 
-sm.id,
-sm.name,
-sm.max,
-c.id as "collectionId",
-c."collectionDate"
-from subquery_maximo sm
-  join cultivo."Collection" c
-    on c."lotId" = sm.id and c.bunches = sm.max
+
 
 -- 7. Muestra la cantidad total de racimos recolectados (`Collection`) en cada lote (`Lot`) para el año en curso. Incluye el identificador del lote y la cantidad total de racimos.
 select 
